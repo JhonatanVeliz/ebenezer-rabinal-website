@@ -1,0 +1,103 @@
+/* CUSTOMPROPERTIES */
+
+:root{
+    /* colors */
+    --color-blue-primary: #051745;
+    --color-blue-secundary: #212733;
+    --color-white: #DEDEDE;
+    --color-grey: #818181;
+    --color-black-primary: #090808;
+    --color-black-secundary: #28292A;
+    --color-vino: #8C0000;
+    /* Fonts */
+    --font-navbar: 'Cinzel';
+    --font-hero: 'Italianno';
+    --font-subtitle: 'Open Sans';
+    --font-paragraph: 'Poppins';
+    --font-cards: 'Sacramento';
+}
+
+.header{
+    background: url(../img/bk-three.png) no-repeat center center;
+    background-size: cover;
+}
+.section-form{
+    background: url(../img/bk-form.png) no-repeat center center;
+    background-size: cover;
+}
+.title{
+    padding: 0;
+    padding-bottom: 4rem;
+}
+.section:nth-child(2){
+    padding-bottom: 0;
+}
+.subtitle{
+    color: var(--color-white);
+}
+.form{
+    display: grid;
+    min-width: 90%;
+    max-width: 40rem;
+}
+.text{
+    display: none;
+    transform: scale(0);
+    width: 100%;
+    margin: 0;
+    color: var(--color-white);
+    font-family: var(--font-paragraph);
+    padding: 1rem;
+    line-height: 1;
+    background-color: #8C0000;
+    transition: .3s linear;
+    opacity: 0;
+}
+.text--active{
+    display: block;
+    transform: scale(1);
+    animation: Appear .8s alternate forwards;
+}
+@keyframes Appear {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.label{
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+    color: var(--color-white);
+}
+.input{
+    background-color: transparent;
+    color: var(--color-grey);
+    padding: 1.5rem;
+    border-radius: .5rem;
+    border: 1px solid var(--color-grey);
+}
+.input-textarea{
+    min-height: 30rem;
+    max-height: 30rem;
+}
+.container-submit{
+    margin-top: -2.5rem;
+    z-index: 5;
+}
+.submit{
+    margin-right: 4rem;
+    padding: 1.5rem 2.5rem;
+    background-color: #0C7389;
+    color: var(--color-white);
+    border: none;
+    border-radius: 1rem;
+}
+
+@media screen and (max-width: 576px) {
+    .section-form{
+        height: auto;
+    }
+}

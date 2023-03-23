@@ -1,0 +1,321 @@
+/* CUSTOMPROPERTIES */
+
+:root{
+    /* colors */
+    --color-blue-primary: #051745;
+    --color-blue-secundary: #212733;
+    --color-white: #DEDEDE;
+    --color-grey: #818181;
+    --color-black-primary: #01071b;
+    --color-black-secundary: #28292A;
+    --color-vino: #8C0000;
+
+    /* text-aling */
+    --aling-subtitle: center;
+
+    /* Fonts */
+    --font-navbar: 'Cinzel';
+    --font-hero: 'Italianno';
+    --font-subtitle: 'Open Sans';
+    --font-paragraph: 'Poppins';
+    --font-cards: 'Sacramento';
+}
+
+/* Botones */
+.btn-carousel{
+    margin: 0 1rem;
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 10rem;
+    background-color: var(--color-black-primary);
+}
+
+/* Header */
+.header{
+    background: url(../img/bk-one.png) no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+}
+
+/* Crad */
+.section-card{
+    width: 30rem;
+    background-color: var(--color-blue-primary);
+    margin: 0 auto;
+    margin-top: -12rem;
+    padding: 3rem;
+    border-radius: 1rem;
+    overflow: visible;
+    z-index: 5;
+    box-shadow: 1px 1px 6px #000;
+}
+
+.card__img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.card__text{
+    padding-top: 2rem;
+    color: var(--color-white);
+    font-size: 2rem;
+    font-family: var(--font-hero);
+}
+.maps{
+    height: 50rem;
+}
+
+/* containers */
+.container-section{
+    max-width: 1300px;
+}
+.container-section--darkblue{
+    min-height: 100vh;
+    max-height: auto;
+    /* background-color: var(--color-blue-secundary); */
+    background-color: #01071b;
+}
+.container__pastor{
+    width: 45%;
+    display: grid;
+    place-content: center;
+}
+.pastor-img-min{
+    width: 30rem;
+}
+.container__pastor:nth-child(1){
+    border-right: 1px solid var(--color-white);
+}
+.paragraph--pastor{
+    padding-left: 5rem;
+}
+.pastor__links{
+    bottom: 0;
+    right: 5rem;
+}
+.z-index{
+    position: relative;
+    z-index: 1;
+}
+/* Horarios */
+.horarios__cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "card-1 card-2 card-3"
+    "card-4 card-5 card-6"
+    "btn btn btn";
+    gap: 2rem;
+}
+.horario__card{
+    border-radius: .5rem;
+    transition: .3s linear;
+    position: relative;
+    background: url(../img/card__horario.png) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 22rem;
+}
+.card__info{
+    font-family: var(--font-cards);
+    font-size: 3rem;
+    color: var(--color-white);
+}
+.horario__card::after{
+    content: '6:30 p.m a 8:00 p.m';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 9, 49, 0.916);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: scale(1.1);
+    transition: .4s;
+    border-radius: .5rem;
+    display: grid;
+    place-content: center;
+    color: var(--color-white);
+    font-family: var(--font-subtitle);
+    font-weight: 200;
+}
+.horario__card:hover::after{
+    opacity: 1;
+    transform: scale(1);
+}
+.horario__img{
+    border-radius: .5rem;
+}
+.paragraph__card{
+    color: var(--color-white);
+}
+.container-btn{
+    grid-area: btn;
+}
+.link-form{
+    margin-top: 2rem;
+    margin-bottom: .3rem;
+    padding: 1.5rem 2.5rem;
+    background: var(--color-vino);
+    color: var(--color-white);
+    font-family: var(--font-cards);
+    font-size: 2rem;
+    border-radius: 5rem;
+    box-shadow: 1px 2px 4px var(--color-black-primary),
+               -1px -1px 4px var(--color-black-primary),
+               0px 0px 4px var(--color-black-primary);
+}
+.link-form:hover{
+    transform: scaleX(1.1);
+}
+.slider{
+    width: 100%;
+    background-color: var(--color-black-primary);
+}
+.slider__container{
+    overflow: hidden;
+    width: 80rem;
+    height: 27rem;
+}
+.carousel-container{
+    width: 50rem;
+}
+.btn-carousel{
+    font-size: 5rem;
+}
+.bar{
+    background-color: var(--color-black-primary);
+}
+.bar__text{
+    padding: 1.5rem;
+    line-height: 1;
+    font-style: italic;
+    margin: 0;
+}
+
+/* MEDIAQUERYS */
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+/* // Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+    .padding{
+        padding: 1.5rem;
+    }
+    .paragraph{
+        font-size: 2rem;
+    }
+    .paragraph--pastor{
+        font-size: 1.7rem;
+        text-align: center;
+        padding-top: 2rem;
+    }
+    .author__p{
+        font-size: 1.5rem;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .header{
+        background: url(../img/bk-one.png) no-repeat left top;
+        background-size: cover;
+        z-index: 0;
+    }
+    .container__pastor{
+        width: 95%;
+    }
+    .section-pastor-col{
+        flex-direction: column;
+    }
+    .subtitle{
+        text-align: center;
+        font-size: 2rem;
+    }
+    .paragraph{
+        font-size: 1.7rem;
+    }
+    .container__pastor:nth-child(1){
+        border-right: none;
+        border-bottom: 1px solid var(--color-grey);
+        padding: 0;
+        padding-bottom: 2rem;
+    }
+    .paragraph--pastor{
+        padding: 0;
+        margin: 0;
+        padding-top: 2rem;
+    }
+    .pastor-img-min{
+        width: 20rem;
+    }
+    .pastor__nav{
+        align-items: center;
+    }
+    .pastor__links{
+        margin: 0;
+    }
+    .horarios__cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .horario__card{
+        margin: 1rem 0;
+    }
+    .btn-carousel{
+        position: relative;
+    }
+    .slider__container{
+        width: 100%;
+    }
+    .author{
+        top: -4rem;
+    }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    .title{
+        font-size: 3rem;
+    }
+    .paragraph{
+        font-size: 1.5rem;
+    }
+    .subtitle{
+        font-size: 1.8rem;
+    }
+    .section-card{
+        overflow: visible;
+        z-index: 10;
+        position: initial;
+    }
+    .horarios__cards{
+        padding: 0 1rem;
+        overflow: hidden;
+    }
+    .menu-btn{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .btn-carousel{
+        position: absolute;
+        top: 10rem;
+        padding: 1rem;
+        background-color: var(--color-black-primary);
+        margin: -.5rem 1rem;
+    }
+    .author{
+        top: -10rem;
+        left: 13rem;
+    }
+    .author__p{
+        font-size: 1.2rem;
+    }
+}

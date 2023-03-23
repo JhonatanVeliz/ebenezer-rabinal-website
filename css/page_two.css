@@ -1,0 +1,108 @@
+/* CUSTOMPROPERTIES */
+
+:root{
+    /* colors */
+    --color-blue-primary: #051745;
+    --color-blue-secundary: #212733;
+    --color-white: #DEDEDE;
+    --color-grey: #818181;
+    --color-black-primary: #090808;
+    --color-black-secundary: #28292A;
+    --color-vino: #8C0000;
+
+    /* Fonts */
+    --font-navbar: 'Cinzel';
+    --font-hero: 'Italianno';
+    --font-subtitle: 'Open Sans';
+    --font-paragraph: 'Poppins';
+    --font-cards: 'Sacramento';
+}
+
+.header{
+    background: url(../img/bk-two.png) no-repeat center center;
+    background-size: cover;
+}
+.container-title{
+    top: 18rem;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+.title-top{
+    top: 15rem;
+    display: block;
+    margin: 0 auto; 
+    color: var(--color-white);
+    z-index: 1;
+    font-size: 6rem;
+}
+.title-star{
+    text-align: start;
+    padding: 4rem 0;
+}
+/* CARDS */
+.container-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+.card{
+    border: none;
+    border-radius: 1rem;
+    background-color: transparent;
+    overflow: hidden;
+}
+.card:hover .card__img img{
+    transform: scale(1.1);
+}
+.card__img{
+    height: 15rem;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: .3s linear;
+}
+.card__title{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-size: 1.5rem;
+}
+.main-link{
+    width: 15rem;
+    margin: 0 auto;
+    display: block;
+    padding: 1rem;
+    color: var(--color-black-primary);
+    background-color: var(--color-vino);
+    border-radius: 5rem;
+    margin-bottom: 4rem;
+    color: var(--color-white);
+    box-shadow: 1px 1px 4px var(--color-black-primary),
+    -1px -1px 4px var(--color-black-primary),
+    0px 0px 4px var(--color-black-primary);
+}
+.main-link:hover{
+    background-color: #6b0202;
+}
+
+/* MEDIAQUERYS */
+@media screen and (max-width: 992px) {
+    .main, .header{
+        padding: 0 2rem;
+    }
+    .container-cards{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 768px) {
+    .container-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 576px) {
+    .container-cards{
+        grid-template-columns: 1fr;
+    }
+}
